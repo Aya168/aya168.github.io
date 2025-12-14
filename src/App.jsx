@@ -17,13 +17,13 @@ export default function App() {
 
       <div className="page">
         <header>
-          <img src="/images/aya.jpg" alt="Photo of Aya Spira" className="headshot" />
+          <img src="/images/aya.png" alt="Photo of Aya Spira" className="headshot" />
           <div>
             <h1>Aya Spira</h1>
-            <div className="tagline">M.Sc. Student · AI Security Researcher</div>
+            <div className="tagline">M.Sc. Student in Computer Science· AI Security Researcher</div>
             <div className="meta">
               <span>Tel Aviv University</span>
-              <span>LLM security · agentic systems · multimodal robustness</span>
+              <span>LLM security · agentic applications</span>
             </div>
             <div className="meta" style={{ marginTop: "6px" }}>
               <span>
