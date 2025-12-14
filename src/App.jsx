@@ -1,146 +1,129 @@
-import React from "react";
+import "./App.css";
 
 export default function App() {
-  const containerStyle = {
-    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-    lineHeight: 1.6,
-    background: "linear-gradient(to bottom, #e0f2ff, #f0f7ff, #e0f2ff)",
-    color: "#1a202c",
-    minHeight: "100vh",
-    padding: "0",
-    margin: "0",
-  };
-
-  const headerStyle = {
-    position: "sticky",
-    top: 0,
-    background: "rgba(255,255,255,0.95)",
-    backdropFilter: "blur(5px)",
-    boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-    zIndex: 100,
-    padding: "1rem 2rem",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-  };
-
-  const navLinkStyle = {
-    marginLeft: "1rem",
-    textDecoration: "none",
-    color: "#1e3a8a",
-    fontWeight: "500",
-  };
-
-  const sectionStyle = {
-    maxWidth: "800px",
-    margin: "2rem auto",
-    padding: "1rem",
-  };
-
-  const cardStyle = {
-    background: "white",
-    borderRadius: "12px",
-    padding: "1rem 1.5rem",
-    marginBottom: "1rem",
-    boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-  };
-
-  const buttonStyle = {
-    background: "linear-gradient(to right, #3b82f6, #1e40af)",
-    color: "white",
-    border: "none",
-    padding: "0.6rem 1.2rem",
-    borderRadius: "999px",
-    cursor: "pointer",
-    fontWeight: "600",
-    marginRight: "0.5rem",
-    marginTop: "0.5rem",
-  };
-
   return (
-    <div style={containerStyle}>
-      {/* Header */}
-      <header style={headerStyle}>
-        <div>
-          <h1 style={{ color: "#1e40af", fontSize: "1.75rem", margin: 0 }}>Aya Spira</h1>
-          <div style={{ fontSize: "0.875rem", color: "#374151" }}>
-            MSc Computer Science · AI Security Researcher
-          </div>
+    <>
+      <nav className="top-nav">
+        <div className="nav-inner">
+          <ul className="nav-list">
+            <li><a className="nav-link" href="#about">About</a></li>
+            <li><a className="nav-link" href="#research">Research</a></li>
+            <li><a className="nav-link" href="#advisors">Advisors</a></li>
+            <li><a className="nav-link" href="#background">Background</a></li>
+            <li><a className="nav-link" href="#contact">Contact</a></li>
+          </ul>
         </div>
-        <nav>
-          {["About", "Research", "Projects", "CV", "Contact"].map((link) => (
-            <a key={link} href={`#${link.toLowerCase()}`} style={navLinkStyle}>
-              {link}
-            </a>
-          ))}
-        </nav>
-      </header>
+      </nav>
 
-      <main>
-        {/* HERO */}
-        <section style={sectionStyle}>
-          <p style={{ color: "#1f2937", fontSize: "1.1rem" }}>
-            MSc Computer Science student at Tel Aviv University researching AI security under Dr. Ben Nassi & Prof. Avishai Wool.
-            I focus on building experiments and tools to improve the safety, privacy, and robustness of AI systems.
-          </p>
-          <div style={{ marginTop: "1rem" }}>
-            <a href="mailto:aya16816@gmail.com" style={buttonStyle}>Email</a>
-            <a href="https://www.linkedin.com/in/aya-spira" target="_blank" rel="noreferrer" style={{ ...buttonStyle, background: "white", color: "#1e3a8a", border: "1px solid #3b82f6" }}>LinkedIn</a>
-            <a href="#projects" style={{ ...buttonStyle, background: "white", color: "#1e3a8a", border: "1px solid #3b82f6" }}>Projects</a>
-          </div>
-        </section>
-
-        {/* ABOUT */}
-        <section id="about" style={sectionStyle}>
-          <h3 style={{ color: "#1e3a8a", fontSize: "1.75rem" }}>About</h3>
-          <p style={{ color: "#1f2937" }}>
-            I specialize in AI security: identifying vulnerabilities in LLM-powered systems, designing principled defenses, and auditing models for privacy and robustness.
-            Previously, I gained experience in software engineering and applied ML research.
-          </p>
-          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", marginTop: "1rem" }}>
-            <div style={cardStyle}>
-              <h5 style={{ color: "#2563eb" }}>Honors & Awards</h5>
-              <ul style={{ fontSize: "0.875rem", color: "#4b5563" }}>
-                <li>President's List Award</li>
-                <li>2nd place — CS Doing Good Hackathon</li>
-              </ul>
+      <div className="page">
+        <header>
+          <img src="/images/aya.jpg" alt="Photo of Aya Spira" className="headshot" />
+          <div>
+            <h1>Aya Spira</h1>
+            <div className="tagline">M.Sc. Student · AI Security Researcher</div>
+            <div className="meta">
+              <span>Tel Aviv University</span>
+              <span>LLM security · agentic systems · multimodal robustness</span>
+            </div>
+            <div className="meta" style={{ marginTop: "6px" }}>
+              <span>
+                <a href="mailto:aya.spira@mail.tau.ac.il">aya.spira@mail.tau.ac.il</a>
+              </span>
+              <span>Tel Aviv, Israel</span>
+              <span>
+                <a href="https://github.com/Aya168" target="_blank" rel="noreferrer">
+                  GitHub
+                </a>
+              </span>
             </div>
           </div>
-        </section>
+        </header>
 
-        {/* RESEARCH */}
-        <section id="research" style={sectionStyle}>
-          <h3 style={{ color: "#1e3a8a", fontSize: "1.75rem" }}>Research</h3>
-          <div style={{ display: "flex", flexDirection: "column", gap: "1rem", marginTop: "1rem" }}>
-            <div style={cardStyle}>
-              <h6 style={{ color: "#2563eb" }}>Core Areas</h6>
-              <ul style={{ fontSize: "0.875rem", color: "#4b5563" }}>
-                <li>LLM safety & misuse detection</li>
-                <li>Adversarial attacks on generative models</li>
-                <li>Privacy & data leakage in ML systems</li>
-                <li>Model robustness and secure deployment</li>
-              </ul>
-            </div>
-            <div style={cardStyle}>
-              <h6 style={{ color: "#2563eb" }}>Advisors</h6>
-              <ul style={{ fontSize: "0.875rem", color: "#4b5563" }}>
-                <li>
-                  <a href="https://www.tau.ac.il/~bnassi" target="_blank" rel="noreferrer" style={{ color: "#1d4ed8", textDecoration: "underline" }}>
-                    Dr. Ben Nassi
-                  </a> — AI Security, Tel Aviv University
-                </li>
-                <li>
-                  <a href="https://www.cs.tau.ac.il/~wool/" target="_blank" rel="noreferrer" style={{ color: "#1d4ed8", textDecoration: "underline" }}>
-                    Prof. Avishai Wool
-                  </a> — Cybersecurity, Tel Aviv University
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
+        <main>
+          <section id="about">
+            <h2>About</h2>
+            <p>
+              I'm an M.Sc. student at Tel Aviv University researching the security of
+              large language model (LLM) systems, with a focus on real-world failure modes
+              in agentic and multimodal settings.
+            </p>
+          </section>
 
-        {/* Projects, CV, Contact can follow the same card style */}
-      </main>
-    </div>
+          <section id="research">
+            <h2>Research</h2>
+            <p>
+              My research centers on <em>non-deterministic weaknesses in LLM-driven systems</em>,
+              studying how rare token-level deviations and embedding drift can be amplified
+              into reliable system-level attacks.
+            </p>
+            <ul>
+              <li>LLM and agentic system security</li>
+              <li>Hallucination as an attack primitive</li>
+              <li>Multimodal promptware and jailbreaks</li>
+            </ul>
+          </section>
+
+                    <section id="advisors">
+  <h2>Advisors</h2>
+  <ul>
+    <li>
+      <strong>      <a
+        href="https://www.nassiben.com/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Dr. Ben Nassi
+      </a></strong>, Tel Aviv University<br />
+
+    </li>
+    <li>
+      <strong>      <a
+        href="https://www.avishaiwool.sites.tau.ac.il/"
+        target="_blank"
+        rel="noreferrer"
+      >
+       Prof. Avishai Wool
+      </a></strong>, Tel Aviv University<br />
+
+    </li>
+  </ul>
+</section>
+
+          <section id="background">
+  <h2>Background</h2>
+
+  <p>
+    B.Sc. in Computer Science from the Technion – Israel Institute of Technology
+    (<em>cum laude, GPA 93</em>).
+
+  Coursework emphasized computer vision and cybersecurity. Research conducted at the Geometric Image Processing
+  Lab focused on{" "}
+  <a href="https://gip.cs.technion.ac.il/lab-projects.php?id=287" target="_blank" rel="noreferrer">
+    Visually Guided Object Insertion Using Diffusion Models
+  </a>.
+</p>
+
+  <p>
+  Former Research Scientist at IBM Research, where I studied security and privacy
+  vulnerabilities in large language models (LLMs). My work involved designing and
+  simulating attack strategies and developing tools for empirical evaluation. I also
+  applied AI techniques to security problems, including managing access control in
+  a vector DB project and automating access request approval using agentic systems.
+</p>
+</section>
+
+          <section id="contact">
+            <h2>Contact</h2>
+            <p>
+              <a href="mailto:aya.spira@mail.tau.ac.il">aya.spira@mail.tau.ac.il</a>
+            </p>
+          </section>
+        </main>
+
+        <footer>
+          © {new Date().getFullYear()} Aya Spira
+        </footer>
+      </div>
+    </>
   );
 }
