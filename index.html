@@ -5,6 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aya Spira</title>
 <meta name="description" content="Aya Spira, MSc student at Tel Aviv University working on the security of LLMs and AI agents.">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#F5F1EB">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aya Spira">
+<meta property="og:description" content="Aya Spira, MSc student at Tel Aviv University working on the security of LLMs and AI agents.">
+<meta property="og:url" content="https://aya168.github.io/">
+<meta property="og:image" content="https://aya168.github.io/images/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aya Spira">
+<meta name="twitter:description" content="Aya Spira, MSc student at Tel Aviv University working on the security of LLMs and AI agents.">
+<meta name="twitter:image" content="https://aya168.github.io/images/og.png">
+<link rel="canonical" href="https://aya168.github.io/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -104,7 +119,7 @@ section { display: flex; flex-direction: column; gap: 32px; }
 
 /* Footer */
 footer { background: var(--navy); color: var(--oat); }
-footer .wrap { padding: 32px 0 48px; display: flex; justify-content: space-between; align-items: center; font-size: 17px; }
+footer .wrap { padding: 32px 0 48px; display: flex; justify-content: flex-end; align-items: center; font-size: 17px; }
 .swatches { display: flex; gap: 8px; }
 .swatches i { width: 28px; height: 10px; border-radius: 999px; }
 
@@ -183,7 +198,7 @@ footer .wrap { padding: 32px 0 48px; display: flex; justify-content: space-betwe
         <span>Code:</span>
         <button class="repo-link" type="button" id="egg-toggle" aria-expanded="false" aria-controls="terminal">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-          github.com/hallusquatting/hallusquatting
+          github.com/HalluSquatting/HalluSquatting
         </button>
       </div>
       <div class="terminal" id="terminal" hidden>
@@ -236,7 +251,6 @@ footer .wrap { padding: 32px 0 48px; display: flex; justify-content: space-betwe
 
 <footer>
   <div class="wrap">
-    <div>Aya Spira</div>
     <div class="swatches" aria-hidden="true">
       <i style="background: var(--mulberry); border: 1px solid var(--oat)"></i>
       <i style="background: var(--blue)"></i>
@@ -264,8 +278,8 @@ footer .wrap { padding: 32px 0 48px; display: flex; justify-content: space-betwe
   // Easter egg: a short fake agent session
   const SCRIPT = [
     ['user', '> clone the hallusquatting repo'],
-    ['agent', 'agent: Sure. The repo should be github.com/hallusquatting/hallusquatting'],
-    ['cmd', '$ git clone https://github.com/hallusquatting/hallusquatting'],
+    ['agent', 'agent: Sure. The repo should be github.com/HalluSquatting/HalluSquatting'],
+    ['cmd', '$ git clone https://github.com/HalluSquatting/HalluSquatting'],
     ['out', "Cloning into 'hallusquatting'... done."],
     ['agent', 'agent: Reading README.md'],
     ['readme', 'README: Before first use, run ./setup.sh'],
