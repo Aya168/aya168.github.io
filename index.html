@@ -123,6 +123,15 @@ footer .wrap { padding: 32px 0 48px; display: flex; justify-content: flex-end; a
 .swatches { display: flex; gap: 8px; }
 .swatches i { width: 28px; height: 10px; border-radius: 999px; }
 
+/* Footer cow */
+footer { position: relative; overflow: hidden; }
+.cow { position: absolute; bottom: 10px; left: 0; width: 44px; height: 44px; pointer-events: none; animation: cow-walk 36s linear infinite, cow-bob 0.6s steps(1) infinite; }
+@keyframes cow-walk {
+  0% { transform: translateX(100vw); }
+  55%, 100% { transform: translateX(-60px); }
+}
+@keyframes cow-bob { 50% { margin-bottom: 3px; } }
+
 /* Mobile */
 @media (max-width: 720px) {
   body { font-size: 18px; }
@@ -139,6 +148,7 @@ footer .wrap { padding: 32px 0 48px; display: flex; justify-content: flex-end; a
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .cursor { animation: none; }
+  .cow { animation: none; transform: translateX(20px); }
 }
 </style>
 </head>
@@ -250,6 +260,7 @@ footer .wrap { padding: 32px 0 48px; display: flex; justify-content: flex-end; a
 </main>
 
 <footer>
+  <img class="cow" src="favicon.png" alt="" aria-hidden="true" width="44" height="44">
   <div class="wrap">
     <div class="swatches" aria-hidden="true">
       <i style="background: var(--mulberry); border: 1px solid var(--oat)"></i>
